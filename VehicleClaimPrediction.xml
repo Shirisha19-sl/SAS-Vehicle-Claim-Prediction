@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<_ROOT_ EMVERSION="15.2" ORIENTATION="HORIZONTAL">
+   <Workspace>
+      <NODES>
+         <NODE CLASS="SASHELP.EMMODL.AUTONEURAL.CLASS" COMPONENT="AutoNeural" ID="AutoNeural"
+               X="695"
+               Y="338"
+               DESCRIPTION="AutoNeural"
+               DIAGRAMID="_ROOT_"
+               PARENTID=""
+               TOOLTYPE="MODEL"
+               TOOLPREFIX="AutoNeural">
+            <PROPERTIES Architecture="SINGLE LAYER" TrainAction="SEARCH" Termination="OVERFITTING"
+                        TargetError="DEFAULT"
+                        Hidden="8"
+                        TotalHidden="30"
+                        MaxIter="30"
+                        AdjustIterations="Y"
+                        FinalTrain="Y"
+                        FinalIter="5"
+                        TotalTime="1 HOUR"
+                        Freeze="N"
+                        Direct="N"
+                        Tanh="Y"
+                        Normal="N"
+                        Sine="Y"
+                        Exponential="N"
+                        Identity="N"
+                        Logistic="Y"
+                        Reciprocal="N"
+                        Softmax="N"
+                        Square="N"
+                        Tolerance="MEDIUM"
+                        Residuals="Y"
+                        Standardizations="N"
+                        HiddenUnits="N"
+                        outfit=""
+                        weights=""
+                        estds=""
+                        Bestds=""
+                        HistoryDs=""
+                        ForceRun="N"
+                        RunAction="Train"
+                        Component="AutoNeural">
+               <VariableProperties/>
+               <EmVariableAttributes/>
+               <EmTargetAttributes>
+                  <is_claim>
+                     <DecData Table="EMWS1.AutoNeural_is_claim_DD">
+                        <Data>
+                           <Obs IS_CLAIM="1" COUNT="2624" DATAPRIOR="0.0639781538" TRAINPRIOR="0.3639894576"
+                                DECPRIOR="."
+                                DECISION1="1"
+                                DECISION2="0"/>
+                           <Obs IS_CLAIM="0" COUNT="4585" DATAPRIOR="0.9360218462" TRAINPRIOR="0.6360105424"
+                                DECPRIOR="."
+                                DECISION1="0"
+                                DECISION2="1"/>
+                        </Data>
+                        <Metadata>
+                           <Variable NAME="is_claim" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+                           <Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="DECISION1" LABEL="1" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
+                        </Metadata>
+                     </DecData>
+                     <DecMeta Table="EMWS1.AutoNeural_is_claim_DM">
+                        <Data>
+                           <Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT=""
+                                TYPE=""
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="TARGET" VARIABLE="is_claim" LABEL="" LEVEL="BINARY" EVENT="1" ORDER=""
+                                FORMAT="BEST12.0"
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="Y"/>
+                           <Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="Y"/>
+                           <Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL=""
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="PREDICTED" VARIABLE="P_is_claim1" LABEL="Predicted: is_claim=1"
+                                LEVEL="1"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="RESIDUAL" VARIABLE="R_is_claim1" LABEL="Residual: is_claim=1" LEVEL="1"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="PREDICTED" VARIABLE="P_is_claim0" LABEL="Predicted: is_claim=0"
+                                LEVEL="0"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="RESIDUAL" VARIABLE="R_is_claim0" LABEL="Residual: is_claim=0" LEVEL="0"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="FROM" VARIABLE="F_is_claim" LABEL="From: is_claim" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="C"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="INTO" VARIABLE="I_is_claim" LABEL="Into: is_claim" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="C"
+                                COST=""
+                                USE=""/>
+                        </Data>
+                        <Metadata>
+                           <Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+                           <Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+                           <Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+                           <Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+                        </Metadata>
+                     </DecMeta>
+                  </is_claim>
+               </EmTargetAttributes>
+               <EmFileProperties>
+                  <EMNOTES Type="EXTERNAL" Extension="txt">
+                     <Data/>
+                  </EMNOTES>
+               </EmFileProperties>
+            </PROPERTIES>
+         </NODE>
+         <NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="FileImport" ID="FIMPORT"
+               X="81"
+               Y="166"
+               DESCRIPTION="File Import"
+               DIAGRAMID="_ROOT_"
+               PARENTID=""
+               TOOLTYPE="SAMPLE"
+               TOOLPREFIX="FIMPORT">
+            <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMSAMP.Fimport.SOURCE" ImportType="Local"
+                        GuessRows="500"
+                        Delimiter=","
+                        NameRow="Y"
+                        SkipRows="0"
+                        MaxRows="1000000"
+                        MaxCols="10000"
+                        FileType="csv"
+                        Role="TRAIN"
+                        ForceRun="N"
+                        Summarize="N"
+                        AdvancedAdvisor="N"
+                        RunAction="Train"
+                        Component="FileImport"
+                        IFileName="C:\Users\skk0141\Downloads\FinalProjInput.csv"
+                        AccessTable="NoTableName"
+                        UserID="NoUserID"
+                        Password="NoPassword">
+               <VariableProperties/>
+               <EmVariableAttributes>
+                  <DELTA Variable="gear_box" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="is_central_locking" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="is_claim" AttributeName="ROLE" AttributeValue="TARGET"/>
+                  <DELTA Variable="is_claim" AttributeName="LEVEL" AttributeValue="BINARY"/>
+                  <DELTA Variable="is_ecw" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="is_parking_camera" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="is_power_door_locks" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="is_power_steering" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="is_rear_window_defogger" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="is_rear_window_washer" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="is_rear_window_wiper" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="is_tpms" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="rear_brakes_type" AttributeName="DROP" AttributeValue="Y"/>
+                  <DELTA Variable="segment" AttributeName="ROLE" AttributeValue="INPUT"/>
+                  <DELTA Variable="transmission_type" AttributeName="DROP" AttributeValue="Y"/>
+               </EmVariableAttributes>
+               <EmTargetAttributes/>
+               <EmFileProperties>
+                  <USERTRAINCODE Type="EXTERNAL" Extension="sas">
+                     <Data/>
+                  </USERTRAINCODE>
+                  <VARIABLESETDELTA Type="EXTERNAL" Extension="txt">
+                     <Data>
+if NAME=&amp;quot;gear_box&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;INTERVAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;is_central_locking&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;is_claim&amp;quot; then do;
+ROLE=&amp;quot;TARGET&amp;quot;;
+LEVEL=&amp;quot;BINARY&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;N&amp;quot;;
+end;
+if NAME=&amp;quot;is_ecw&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;is_parking_camera&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;is_power_door_locks&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;is_power_steering&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;is_rear_window_defogger&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;is_rear_window_washer&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;is_rear_window_wiper&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;is_tpms&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;rear_brakes_type&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+if NAME=&amp;quot;segment&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;N&amp;quot;;
+end;
+if NAME=&amp;quot;transmission_type&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+DROP=&amp;quot;Y&amp;quot;;
+end;
+
+</Data>
+                  </VARIABLESETDELTA>
+                  <DELTACODE Type="EXTERNAL" Extension="txt">
+                     <Data>
+if NAME=&amp;quot;gear_box&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;INTERVAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;gear_box&amp;quot; then delete;
+if NAME=&amp;quot;is_central_locking&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_central_locking&amp;quot; then delete;
+if NAME=&amp;quot;is_claim&amp;quot; then do;
+ROLE=&amp;quot;TARGET&amp;quot;;
+LEVEL=&amp;quot;BINARY&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_ecw&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_ecw&amp;quot; then delete;
+if NAME=&amp;quot;is_parking_camera&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_parking_camera&amp;quot; then delete;
+if NAME=&amp;quot;is_power_door_locks&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_power_door_locks&amp;quot; then delete;
+if NAME=&amp;quot;is_power_steering&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_power_steering&amp;quot; then delete;
+if NAME=&amp;quot;is_rear_window_defogger&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_rear_window_defogger&amp;quot; then delete;
+if NAME=&amp;quot;is_rear_window_washer&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_rear_window_washer&amp;quot; then delete;
+if NAME=&amp;quot;is_rear_window_wiper&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_rear_window_wiper&amp;quot; then delete;
+if NAME=&amp;quot;is_tpms&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;is_tpms&amp;quot; then delete;
+if NAME=&amp;quot;rear_brakes_type&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;rear_brakes_type&amp;quot; then delete;
+if NAME=&amp;quot;segment&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;transmission_type&amp;quot; then do;
+ROLE=&amp;quot;INPUT&amp;quot;;
+LEVEL=&amp;quot;NOMINAL&amp;quot;;
+ORDER=&amp;quot;&amp;quot;;
+end;
+if NAME=&amp;quot;transmission_type&amp;quot; then delete;
+drop DROP;
+
+</Data>
+                  </DELTACODE>
+                  <EMNOTES Type="EXTERNAL" Extension="txt">
+                     <Data/>
+                  </EMNOTES>
+               </EmFileProperties>
+            </PROPERTIES>
+         </NODE>
+         <NODE CLASS="SASHELP.EMASSMT.ASSESS.CLASS" COMPONENT="ModelCompare" ID="MdlComp"
+               X="960"
+               Y="184"
+               DESCRIPTION="Model Comparison"
+               DIAGRAMID="_ROOT_"
+               PARENTID=""
+               TOOLTYPE="ASSESS"
+               TOOLPREFIX="MdlComp">
+            <PROPERTIES NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20"
+                        LiftEpsilon="1E-6"
+                        ProfitEpsilon="1E-6"
+                        RoiEpsilon="1E-6"
+                        ScoreDistBin="20"
+                        RocChart="Y"
+                        RocEpsilon="0.01"
+                        AssessAllTargetLevels="N"
+                        SelectionData="DEFAULT"
+                        HPCriteria="DEFAULT"
+                        intervalViyaCriteria="DEFAULT"
+                        classViyaCriteria="DEFAULT"
+                        SelectionTable="VALIDATE"
+                        SelectionCriteria="_MISC_"
+                        SelectionDepth="10"
+                        NumberofBins="20"
+                        RecomputeAssess="N"
+                        TargetName="is_claim"
+                        ModelId="Tree"
+                        ModelDescription="Decision Tree"
+                        ModelCriteria="Valid: Misclassification Rate"
+                        ForceRun="N"
+                        RunAction="Train"
+                        Component="ModelCompare"
+                        StatisticUsed="_VMISC_"
+                        TargetLabel="">
+               <VariableProperties/>
+               <EmVariableAttributes/>
+               <EmTargetAttributes/>
+               <EmFileProperties>
+                  <EMNOTES Type="EXTERNAL" Extension="txt">
+                     <Data/>
+                  </EMNOTES>
+               </EmFileProperties>
+            </PROPERTIES>
+         </NODE>
+         <NODE CLASS="SASHELP.EMSAMP.EMDPART.CLASS" COMPONENT="Partition" ID="Part" X="384"
+               Y="173"
+               DESCRIPTION="Data Partition"
+               DIAGRAMID="_ROOT_"
+               PARENTID=""
+               TOOLTYPE="SAMPLE"
+               TOOLPREFIX="Part">
+            <PROPERTIES Method="DEFAULT" TrainPct="70" ValidatePct="30" TestPct="0" RandomSeed="12345"
+                        OutputType="DATA"
+                        IntervalDistribution="Y"
+                        ClassDistribution="Y"
+                        ForceRun="N"
+                        RunAction="Train"
+                        Component="Partition">
+               <VariableProperties/>
+               <EmVariableAttributes/>
+               <EmTargetAttributes/>
+               <EmFileProperties>
+                  <EMNOTES Type="EXTERNAL" Extension="txt">
+                     <Data/>
+                  </EMNOTES>
+               </EmFileProperties>
+            </PROPERTIES>
+         </NODE>
+         <NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg" X="696"
+               Y="50"
+               DESCRIPTION="Regression"
+               DIAGRAMID="_ROOT_"
+               PARENTID=""
+               TOOLTYPE="MODEL"
+               TOOLPREFIX="Reg">
+            <PROPERTIES MainEffect="Y" TwoFactor="N" Polynomial="N" PolynomialDegree="2" Terms="N"
+                        Error="LOGISTIC"
+                        LinkFunction="LOGIT"
+                        SuppressIntercept="N"
+                        InputCoding="DEVIATION"
+                        MinResourceUse="N"
+                        ModelSelection="STEPWISE"
+                        SelectionCriterion="DEFAULT"
+                        SelectionDefault="Y"
+                        Sequential="N"
+                        SlEntry="0.05"
+                        SlStay="0.05"
+                        Start="0"
+                        Stop="0"
+                        Force="0"
+                        Hierarchy="CLASS"
+                        Rule="NONE"
+                        MaxStep="."
+                        StepOutput="N"
+                        OptimizationTechnique="DEFAULT"
+                        ModelDefaults="Y"
+                        MaxIterations="."
+                        MaxFunctionCalls="."
+                        MaxCPUTime="1 HOUR"
+                        ConvDefaults="Y"
+                        AbsConvValue="-1.34078E154"
+                        AbsFValue="0"
+                        AbsFTime="1"
+                        AbsGValue="0.00001"
+                        AbsGTime="1"
+                        AbsXValue="1E-8"
+                        AbsXTime="1"
+                        FConvValue="0"
+                        FConvTimes="1"
+                        GConvValue="1E-6"
+                        GConvTimes="1"
+                        ClParm="N"
+                        Covout="N"
+                        CovB="N"
+                        CorB="N"
+                        Simple="N"
+                        SuppressOutput="N"
+                        Details="N"
+                        PrintDesignMatrix="N"
+                        SASSPDS="N"
+                        Performance="N"
+                        ExcludedVariable="REJECT"
+                        ForceRun="N"
+                        RunAction="Train"
+                        Component="Regression"
+                        Interactions="">
+               <VariableProperties/>
+               <EmVariableAttributes/>
+               <EmTargetAttributes>
+                  <is_claim>
+                     <DecData Table="EMWS1.Reg_is_claim_DD">
+                        <Data>
+                           <Obs IS_CLAIM="1" COUNT="2624" DATAPRIOR="0.0639781538" TRAINPRIOR="0.3639894576"
+                                DECPRIOR="."
+                                DECISION1="1"
+                                DECISION2="0"/>
+                           <Obs IS_CLAIM="0" COUNT="4585" DATAPRIOR="0.9360218462" TRAINPRIOR="0.6360105424"
+                                DECPRIOR="."
+                                DECISION1="0"
+                                DECISION2="1"/>
+                        </Data>
+                        <Metadata>
+                           <Variable NAME="is_claim" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+                           <Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="DECISION1" LABEL="1" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
+                        </Metadata>
+                     </DecData>
+                     <DecMeta Table="EMWS1.Reg_is_claim_DM">
+                        <Data>
+                           <Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT=""
+                                TYPE=""
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="TARGET" VARIABLE="is_claim" LABEL="" LEVEL="BINARY" EVENT="1" ORDER=""
+                                FORMAT="BEST12.0"
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="Y"/>
+                           <Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="Y"/>
+                           <Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL=""
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="PREDICTED" VARIABLE="P_is_claim1" LABEL="Predicted: is_claim=1"
+                                LEVEL="1"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="RESIDUAL" VARIABLE="R_is_claim1" LABEL="Residual: is_claim=1" LEVEL="1"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="PREDICTED" VARIABLE="P_is_claim0" LABEL="Predicted: is_claim=0"
+                                LEVEL="0"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="RESIDUAL" VARIABLE="R_is_claim0" LABEL="Residual: is_claim=0" LEVEL="0"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="FROM" VARIABLE="F_is_claim" LABEL="From: is_claim" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="C"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="INTO" VARIABLE="I_is_claim" LABEL="Into: is_claim" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="C"
+                                COST=""
+                                USE=""/>
+                        </Data>
+                        <Metadata>
+                           <Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+                           <Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+                           <Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+                           <Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+                        </Metadata>
+                     </DecMeta>
+                  </is_claim>
+               </EmTargetAttributes>
+               <EmFileProperties>
+                  <EMNOTES Type="EXTERNAL" Extension="txt">
+                     <Data/>
+                  </EMNOTES>
+               </EmFileProperties>
+            </PROPERTIES>
+         </NODE>
+         <NODE CLASS="SASHELP.EMEXPL.STATEXPLORE.CLASS" COMPONENT="StatExplore" ID="Stat"
+               X="269"
+               Y="87"
+               DESCRIPTION="StatExplore"
+               DIAGRAMID="_ROOT_"
+               PARENTID=""
+               TOOLTYPE="EXPLORE"
+               TOOLPREFIX="Stat">
+            <PROPERTIES BySegment="N" Correlation="Y" Spearman="N" Pearson="Y" ChiSquare="Y"
+                        ChiSquareInterval="Y"
+                        ChiSquareIntervalNBins="5"
+                        MaximumVars="1000"
+                        HideVariable="Y"
+                        DropRejected="Y"
+                        UseValidate="N"
+                        UseTest="N"
+                        UseScore="N"
+                        NObs="100000"
+                        IntervalDistribution="Y"
+                        ClassDistribution="Y"
+                        LevelSummary="Y"
+                        ForceRun="N"
+                        RunAction="Train"
+                        Component="StatExplore">
+               <VariableProperties/>
+               <EmVariableAttributes/>
+               <EmTargetAttributes/>
+               <EmFileProperties>
+                  <CROSSTAB Type="DATA">
+                     <Data/>
+                     <Metadata/>
+                  </CROSSTAB>
+                  <EMNOTES Type="EXTERNAL" Extension="txt">
+                     <Data/>
+                  </EMNOTES>
+               </EmFileProperties>
+            </PROPERTIES>
+         </NODE>
+         <NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DecisionTree" ID="Tree"
+               X="701"
+               Y="180"
+               DESCRIPTION="Decision Tree"
+               DIAGRAMID="_ROOT_"
+               PARENTID=""
+               TOOLTYPE="MODEL"
+               TOOLPREFIX="Tree">
+            <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMODL.TREE.SOURCE" ToolType="MODEL"
+                        TrainMode="BATCH"
+                        ImportModel="N"
+                        Freeze="N"
+                        UseMultipleTarget="N"
+                        Precision="4"
+                        IntervalCriterion="PROBF"
+                        NominalCriterion="PROBCHISQ"
+                        OrdinalCriterion="ENTROPY"
+                        SigLevel="0.2"
+                        Splitsize="."
+                        LeafSize="5"
+                        MinCatSize="5"
+                        Maxbranch="5"
+                        Maxdepth="10"
+                        Nrules="5"
+                        Nsurrs="0"
+                        MissingValue="USEINSEARCH"
+                        UseVarOnce="N"
+                        SplitPrecision="4"
+                        Subtree="ASSESSMENT"
+                        NSubtree="1"
+                        AssessMeasure="PROFIT/LOSS"
+                        AssessPercentage="0.25"
+                        NodeSample="20000"
+                        Exhaustive="5000"
+                        Kass="Y"
+                        KassApply="BEFORE"
+                        Depth="Y"
+                        Inputs="N"
+                        NumInputs="1"
+                        VarSelection="Y"
+                        Leafid="Y"
+                        NodeRole="SEGMENT"
+                        Performance="DISK"
+                        CV="N"
+                        CVNIter="10"
+                        CVRepeat="1"
+                        CVSeed="12345"
+                        ObsImportance="N"
+                        NumSingleImp="5"
+                        UseDecision="N"
+                        UsePriors="N"
+                        ClassColorBy="PERCENTCORRECT"
+                        IntColorBy="AVG"
+                        ShowNodeId="Y"
+                        ShowValid="Y"
+                        Pred="N"
+                        Target="ALL"
+                        Count="Y"
+                        ProfitLoss="NONE"
+                        PercentCorrect="N"
+                        AVG="Y"
+                        RASE="N"
+                        CreateSample="DEFAULT"
+                        SampleMethod="RANDOM"
+                        SampleSize="10000"
+                        SampleSeed="12345"
+                        ForceRun="N"
+                        RunAction="Train"
+                        Component="DecisionTree"
+                        Criterion="DEFAULT"
+                        Dummy="N"
+                        Predict="Y"
+                        ImportedTreeData="">
+               <VariableProperties/>
+               <EmVariableAttributes/>
+               <EmTargetAttributes>
+                  <is_claim>
+                     <DecData Table="EMWS1.Tree_is_claim_DD">
+                        <Data>
+                           <Obs IS_CLAIM="1" COUNT="2624" DATAPRIOR="0.0639781538" TRAINPRIOR="0.3639894576"
+                                DECPRIOR="."
+                                DECISION1="1"
+                                DECISION2="0"/>
+                           <Obs IS_CLAIM="0" COUNT="4585" DATAPRIOR="0.9360218462" TRAINPRIOR="0.6360105424"
+                                DECPRIOR="."
+                                DECISION1="0"
+                                DECISION2="1"/>
+                        </Data>
+                        <Metadata>
+                           <Variable NAME="is_claim" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
+                           <Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="DECPRIOR" LABEL="Decision Priors" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="DECISION1" LABEL="1" LENGTH="8" FORMAT="" TYPE="N"/>
+                           <Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
+                        </Metadata>
+                     </DecData>
+                     <DecMeta Table="EMWS1.Tree_is_claim_DM">
+                        <Data>
+                           <Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT=""
+                                TYPE=""
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="TARGET" VARIABLE="is_claim" LABEL="" LEVEL="BINARY" EVENT="1" ORDER=""
+                                FORMAT="BEST12.0"
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="Y"/>
+                           <Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="Y"/>
+                           <Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL=""
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE="N"/>
+                           <Obs _TYPE_="PREDICTED" VARIABLE="P_is_claim1" LABEL="Predicted: is_claim=1"
+                                LEVEL="1"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="RESIDUAL" VARIABLE="R_is_claim1" LABEL="Residual: is_claim=1" LEVEL="1"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="PREDICTED" VARIABLE="P_is_claim0" LABEL="Predicted: is_claim=0"
+                                LEVEL="0"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="RESIDUAL" VARIABLE="R_is_claim0" LABEL="Residual: is_claim=0" LEVEL="0"
+                                EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="N"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="FROM" VARIABLE="F_is_claim" LABEL="From: is_claim" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="C"
+                                COST=""
+                                USE=""/>
+                           <Obs _TYPE_="INTO" VARIABLE="I_is_claim" LABEL="Into: is_claim" LEVEL="" EVENT=""
+                                ORDER=""
+                                FORMAT=""
+                                TYPE="C"
+                                COST=""
+                                USE=""/>
+                        </Data>
+                        <Metadata>
+                           <Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="VARIABLE" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="LABEL" LABEL="Label" LENGTH="256" FORMAT="" TYPE="C"/>
+                           <Variable NAME="LEVEL" LABEL="Measurement Level" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="EVENT" LABEL="Target Event" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="ORDER" LABEL="Order" LENGTH="10" FORMAT="" TYPE="C"/>
+                           <Variable NAME="FORMAT" LABEL="Format" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+                           <Variable NAME="COST" LABEL="Cost" LENGTH="32" FORMAT="" TYPE="C"/>
+                           <Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
+                        </Metadata>
+                     </DecMeta>
+                  </is_claim>
+               </EmTargetAttributes>
+               <EmFileProperties>
+                  <USERTRAINCODE Type="EXTERNAL" Extension="sas">
+                     <Data/>
+                  </USERTRAINCODE>
+                  <EMNOTES Type="EXTERNAL" Extension="txt">
+                     <Data/>
+                  </EMNOTES>
+               </EmFileProperties>
+            </PROPERTIES>
+         </NODE>
+      </NODES>
+      <CONNECTIONS>
+         <CONNECTION FROM="FIMPORT" TO="Part"/>
+         <CONNECTION FROM="FIMPORT" TO="Stat"/>
+         <CONNECTION FROM="Part" TO="Reg"/>
+         <CONNECTION FROM="Part" TO="Tree"/>
+         <CONNECTION FROM="Part" TO="AutoNeural"/>
+         <CONNECTION FROM="Reg" TO="MdlComp"/>
+         <CONNECTION FROM="Tree" TO="MdlComp"/>
+         <CONNECTION FROM="AutoNeural" TO="MdlComp"/>
+      </CONNECTIONS>
+      <NOTES>
+         <DATA>
+
+
+</DATA>
+      </NOTES>
+   </Workspace>
+</_ROOT_>

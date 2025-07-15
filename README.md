@@ -1,11 +1,14 @@
 # Vehicle-Claim-Prediction
 
-# Introduction:
+## Introduction:
 In the competitive landscape of the insurance industry, accurately predicting car insurance claims is crucial for enhancing profitability and customer satisfaction. This project focuses on developing a predictive model to determine the likelihood of a policyholder filing a claim within the next six months based on the car insured.
 The second-hand dataset used for this project from Kaggle, with around 40 columns and more than 50k records, includes comprehensive information about the policyholders, encompassing various attributes such as policy tenure, age of the car, age of the car owner, population density of the policyholder's city, and specifics of the car including make, model, power, and engine type. These features provide valuable insights into both the vehicle's characteristics and the policyholder's environment, allowing for a robust analysis of the factors influencing claim likelihood.
 By leveraging this data, the project aims to identify key risk factors and patterns that can be used to inform business decisions such as premium adjustments, underwriting policies, and customer engagement strategies.
 
-# Data Exploration
+## Dataset Link
+- <a href="https://www.kaggle.com/datasets/ifteshanajnin/carinsuranceclaimprediction-classification/data?select=train.csv">Dataset</a>
+
+## Data Exploration
 The second-hand dataset used for this project from Kaggle, with around 40 columns and more than 11k records, includes comprehensive information about the policyholders, encompassing various attributes such as policy tenure, age of the car, age of the car owner, population density of the policyholder's city, and specifics of the car including make, model, power, and engine type. 
 These features provide valuable insights into both the vehicle's characteristics and the policyholder's environment, allowing for a robust analysis of the factors influencing claim likelihood.
 Is_claim – A binary variable indicating whether the policy holder file a claim in the next 6 months or not.
@@ -15,11 +18,11 @@ Skewness of the variables is very minimal which means the data doesn’t have mu
 Can see no abnormalities in values based on the minimum and maximum for each variable.
 No imputation or handling outliers is needed.
 
-# Data Partition 
+## Data Partition 
 The data is partitioned into 70% training data and 30% validation data. 
 We do this using a Data Partition node with training and validation evenly distributed with the target values.
 
-# Model
+## Model
 #### Logistic regression
 Add the logistic regression node to the data partition node and analyze the results. 
 We have used stepwise algorithm as our selection model. The stepwise selection method starts with an intercept and iteratively adds the predictors to the model based on their significance levels.
@@ -59,20 +62,20 @@ The plot displaying the misclassification rate for the neural network shows that
 <img width="411" height="171" alt="ANN 2" src="https://github.com/user-attachments/assets/3ab9d598-fdb5-4388-8a3a-0b460a5da8cf" />
 
 
-# Model Comparison
+## Model Comparison
 In this project, multiple models were developed to predict claims. To identify the best-performing model, we used the model comparison node, evaluating each model based on the misclassification rate on the validation dataset.
 The results from the model comparison node show that the Decision Tree model achieved the best performance, with a validation misclassification rate of 0.35, translating to an accuracy of approximately 65%. The Artificial Neural Network (ANN) model also performed comparably, with accuracy close to that of the Decision Tree.
 
 <img width="960" height="192" alt="Model Comparison" src="https://github.com/user-attachments/assets/91cd3ba4-49b0-4004-9da6-cc3b15dea93d" />
 
-# Business Value
+## Business Value
 Predicting car insurance claims based on a comprehensive dataset adds considerable business value by enhancing pricing accuracy, improving underwriting and claims management, and supporting strategic decision-making. This leads to greater profitability, operational efficiency, and competitive advantage in the insurance market.
 This prediction not only enhances the precision of underwriting processes but also contributes to the development of personalized insurance products, ultimately driving customer loyalty and operational efficiency.
 Improved pricing accuracy enhances profitability and competitiveness in the market while ensuring customers are charged fairly based on their risk profile.
 We can see that the variables like age_of_car,  policy tenure, area_cluster and displacement (engine capacity in CC) play a major role in claim prediction.
 By analyzing these variables, insurers can better tailor policies, pricing, and risk management strategies to suit the needs and risk profiles of customers in specific geographic regions.
 
-# Conclusion
+## Conclusion
 The fact that different models all have similar misclassification rates suggests that there may be limitations in the data itself, as different algorithms are unable to find substantially different patterns.
 Insufficient predictive features: The current features might not capture enough information to differentiate claim vs. no-claim events well.
 Overlapping Data Patterns: If the features for claim and non-claim cases are similar, it will be challenging for models to separate them accurately.
